@@ -11,8 +11,12 @@ import { MoviesService } from "./services/movies.service";
 import { MatInputModule } from "@angular/material/input";
 import { MatSelectModule } from "@angular/material/select";
 import { ReactiveFormsModule } from "@angular/forms";
+import { LoginComponent } from "./components/login/login.component";
+import { AppRoutingModule } from "./app-routing.module";
+import { MoviesComponent } from "./components/movies/movies.component";
+import { MatTabsModule } from "@angular/material/tabs";
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, LoginComponent, MoviesComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule, // new modules added here
@@ -23,7 +27,9 @@ import { ReactiveFormsModule } from "@angular/forms";
     HttpClientModule,
     MatInputModule,
     MatSelectModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule,
+    MatTabsModule
   ],
   providers: [MoviesService],
   bootstrap: [AppComponent]
